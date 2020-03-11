@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Numerical Solution of Algebraic and Transcendental Equations - Muhammad Ali Yusuf 180411100135</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Numerical Solution of Algebraic and Transcendental Equations";
+    var mkdocs_page_input_path = "assignments2.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Muhammad Ali Yusuf 180411100135</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../assignments/">Error in Numerical Computations</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Numerical Solution of Algebraic and Transcendental Equations</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#metode-bisection">Metode Bisection</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algortima-pada-motode-bisection">Algortima Pada Motode Bisection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing Program</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metode-regula-falsi">Metode Regula Falsi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algortima-pada-motode-regula-falsi">Algortima Pada Motode Regula-Falsi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listing-program_1">Listing Program</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metode-newton-raphson">Metode Newton Raphson</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algortima-pada-motode-newton-raphson">Algortima Pada Motode Newton Raphson</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listing-program_2">Listing Program</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metode-secant">Metode Secant</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algortima-pada-dengan-motode-secant">Algortima Pada dengan Motode Secant</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#listing-program_3">Listing Program</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Muhammad Ali Yusuf 180411100135</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Numerical Solution of Algebraic and Transcendental Equations</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="numerical-solution-of-algebraic-and-transcendental-equations">Numerical Solution of Algebraic and Transcendental Equations</h1>
+<p>Metode Tertutup</p>
+<ul>
+<li>Mencari akar pada range [a,b] tertentu</li>
+<li>Dalam range[a,b] dipastikan terdapat satu akar</li>
+<li>Hasil selalu konvergen → disebut juga metode konvergen</li>
+<li>Contohnya Metode Tabel ,Metode Biseksi,Metode Regula Falsi</li>
+</ul>
+<p>Metode Terbuka</p>
+<ul>
+<li>Diperlukan tebakan awal</li>
+<li>xn dipakai untuk menghitung xn+1</li>
+<li>Hasil dapat konvergen atau divergen</li>
+<li>Contohnya Metode Iterasi Sederhana, Metode Newton-Raphson, Metode Secant.</li>
+</ul>
+<p>Berikut metode-metode numerik yang dapat digunakan untuk mencarian akar persamaan non linear:</p>
+<ol>
+<li>Metode Bisection</li>
+<li>Metode Regula Falsi</li>
+<li>Metode Newton Rapson</li>
+<li>Motode Secant</li>
+</ol>
+<h3 id="metode-bisection">Metode Bisection</h3>
+<p>Metode biseksi ini membagi range menjadi 2 bagian, dari dua bagian ini dipilih bagian mana yang mengandung akar sedangkan bagian yang tidak mengandung akar akan dibuang. Hal ini dilakukan berulang-ulang hingga diperoleh suatu akar persamaan.</p>
+<h4 id="algortima-pada-motode-bisection"><em>Algortima Pada Motode Bisection</em></h4>
+<ol>
+<li>Definisikan fungsi f(x)f(x) yang akan dicari akarnya</li>
+<li>Tentukan nilai aa dan bb</li>
+<li>Tentukan toleransi ϵϵ dan iterasi maksimum NN</li>
+<li>Hitung f(a)f(a) dan f(b)f(b)</li>
+<li>Jika f(a).f(b)&gt;0f(a).f(b)&gt;0 maka proses dihentikan karena tidak ada akar, bila tidak maka dilanjutkan</li>
+<li>Hitung x=(a+b)/2x=(a+b)/2</li>
+<li>Hitung f(x)f(x)</li>
+<li>Bila f(x).f(a)&lt;0f(x).f(a)&lt;0 maka b=xb=x dan f(b)=f(x)f(b)=f(x), bila tidak maka a=xa=x dan f(a)=f(x)f(a)=f(x)</li>
+<li>Jika |b−a|&lt;ϵ|b−a|&lt;ϵ atau iterasi telah mencapai iterasi maks maka proses dihentikan dan didapatkan akar xx, bila tidak, ulangi langkah 6</li>
+</ol>
+<h4 id="listing-program"><u>Listing Program</u></h4>
+<pre><code class="python">def bisection(f,a,b,N):
+
+    if f(a)*f(b) &gt;= 0:
+        print(&quot;Bisection method fails.&quot;)
+        return None
+    a_n = a
+    b_n = b
+    for n in range(1,N+1):
+        m_n = (a_n + b_n)/2
+        f_m_n = f(m_n)
+        if f(a_n)*f_m_n &lt; 0:
+            a_n = a_n
+            b_n = m_n
+        elif f(b_n)*f_m_n &lt; 0:
+            a_n = m_n
+            b_n = b_n
+        elif f_m_n == 0:
+            print(&quot;Found exact solution.&quot;)
+            return m_n
+        else:
+            print(&quot;Bisection method fails.&quot;)
+            return None
+    return (a_n + b_n)/2
+f = lambda x: x**2 - 5*x + 6
+approx_phi = bisection(f,1,2.3,25)
+print(approx_phi)
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">1.9999999985098835
+</code></pre>
+
+<h3 id="metode-regula-falsi">Metode Regula Falsi</h3>
+<p>Metode ini adalah metode tertua untuk menemukan akar sebenarnya dari persamaan f (x) = 0. Ia juga dikenal sebagai metode akor atau metode interpolasi linier. Seperti metode pembagian dua bagian, posisi yang salah satu metodenya dimulai dengan dua titik a0a0dan b0b0 sedemikian rupa sehingga f (a0a0) dan f(b0b0) memiliki tanda-tanda yang berlawanan, yang menyiratkan oleh teorema nilai menengah bahwa fungsi f memiliki akar dalam interval [a0,b0][a0,b0], dengan asumsi kesinambungan dari fungsi f.</p>
+<p>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range. Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier. Dikenal dengan metode False Position. Metode ini juga merupakan penyempurnan dari metode bisection.</p>
+<h4 id="algortima-pada-motode-regula-falsi"><em>Algortima Pada Motode Regula-Falsi</em></h4>
+<ol>
+<li>
+<p>Definisikan fungsi f(x)f(x) yang akan dicari akarnya</p>
+</li>
+<li>
+<p>Masukkan interval [a,b][a,b] dimana akar berada, atau bisa dengan menententukan nilai a dan b</p>
+</li>
+<li>
+<p>Tentukan toleransi ϵϵ dan iterasi maksimum N</p>
+</li>
+<li>
+<p>Hitung f(a)f(a) dan f(b)f(b)</p>
+</li>
+<li>
+<p>Mengecek nilai f(a).f(b)&lt;0f(a).f(b)&lt;0 bila tidak maka proses nilai f(a).f(b)&gt;0f(a).f(b)&gt;0, akan memberhentikan proses perhitungan (program)</p>
+</li>
+<li>
+<p>Mengkalkulasi x=(a|f(b)|+b|f(a)|)|f(a)|+|f(b)|x=(a|f(b)|+b|f(a)|)|f(a)|+|f(b)|</p>
+</li>
+<li>
+<p>Jika f(a).f(x)&lt;0f(a).f(x)&lt;0 maka b=xb=x, ketika tidak jika f(x)f(b)&lt;0f(x)f(b)&lt;0 maka a=xa=x</p>
+</li>
+<li>
+<p>Jika |b−a|&lt;ϵ|b−a|&lt;ϵ , ϵϵ menjadi akurasi yang ditentukan. Lalu lanjutkan ke Langkah 9 yang lain Langkah 4</p>
+</li>
+<li>
+<p>Cetak nilai xx yang dibutuhkan akar</p>
+</li>
+</ol>
+<h4 id="listing-program_1"><u>Listing Program</u></h4>
+<pre><code class="python">error = 0.01
+a = 0
+b = 2.1
+
+def f(x):
+    return x**2 - 5*x + 6
+
+def regulasi_falsi(a,b):
+    i=0
+    max_iter = 50
+    iteration = True
+    while iteration and i &lt; max_iter:
+        if f(a)*f(b) &lt; 0:
+            x = (a*abs(f(b)) + b*abs(f(a))) / (abs(f(a)) + abs(f(b)))
+            if f(a)*f(x) &lt; 0:
+                b = x
+
+            if f(x)*f(b) &lt; 0:
+                a = x
+
+            if abs(a-b) &lt; error:
+                iteration = False
+            else:
+                i+=1
+        else:
+            print('Tidak di temukan akar')
+    print('x =', x)
+
+
+regulasi_falsi(a,b)
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">x = 2.000000000174259
+</code></pre>
+
+<h3 id="metode-newton-raphson"><strong>Metode Newton Raphson</strong></h3>
+<p>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range. Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier. Dikenal dengan metode False Position. Metode ini juga merupakan penyempurna dari metode bisection.</p>
+<h4 id="algortima-pada-motode-newton-raphson"><em>Algortima Pada Motode Newton Raphson</em></h4>
+<ol>
+<li>
+<p>Definisikan fungsi f(x),f′(x)f(x),f′(x) yang akan dicari akarnya</p>
+</li>
+<li>
+<p>Tentukan tebakan awal akar (katakanlah x0x0) dan set n=0n=0</p>
+</li>
+<li>
+<p>Tentukan toleransi ϵϵ dan iterasi maksimum N</p>
+</li>
+<li>
+<p>Hitung xn+1=xn−[f(xn)/f′(x)n]xn+1=xn−[f(xn)/f′(x)n]</p>
+</li>
+<li>
+<p>Jika |xn+1−xn|&lt;e|xn+1−xn|&lt;e , di mana ε adalah akurasi yang ditentukan, lalu lanjutkan ke Langkah 7, bila lanjut ke langkah 6</p>
+</li>
+<li>
+<p>Set n=n+1n=n+1 dan pergi ke langkah 4</p>
+</li>
+<li>
+<p>Cetak nilai xnxn yang merupakan nilai akar yang diperlukan</p>
+</li>
+</ol>
+<h4 id="listing-program_2"><u>Listing Program</u></h4>
+<pre><code class="python">def newton(f,Df,x0,epsilon,max_iter):
+
+    xn = x0
+    for n in range(0,max_iter):
+        fxn = f(xn)
+        if abs(fxn) &lt; epsilon:
+            print('Found solution after',n,'iterations.')
+            return xn
+        Dfxn = Df(xn)
+        if Dfxn == 0:
+            print('Zero derivative. No solution found.')
+            return None
+        xn = xn - fxn/Dfxn
+    print('Exceeded maximum iterations. No solution found.')
+    return None
+
+p = lambda x: x**2 - 5*x + 6
+Dp = lambda x: 2*x - 5 
+approx = newton(p,Dp,1,1e-3,10)
+print(approx)
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">Found solution after 4 iterations.
+1.9999847409781035
+</code></pre>
+
+<h3 id="metode-secant">Metode Secant</h3>
+<p>Metode secant merupakan perbaikan dari metode regula-falsi dan newton raphson dimana kemiringan dua titik dinyatakan sacara diskrit, dengan mengambil bentuk garis lurus yang melalui satu titik. Metode Newton Raphson memerlukan perhitungan turunan fungsi f’(x). Tidak semua fungsi mudah dicari turunannya terutama fungsi yang bentuknya rumit. Turunan fungsi dapat dihilangkan dengan cara menggantinya dengan bentuk lain yang ekivalen Modifikasi metode Newton Raphson dinamakan metode Secant.</p>
+<p>Pada Metode Newton-Raphson memerlukan syarat wajib yaitu fungsi f(x) harus memiliki turunan f'(x). Sehingga syarat wajib ini dianggap sulit karena tidak semua fungsi bisa dengan mudah mencari turunannya. Oleh karena itu muncul ide dari yaitu mencari persamaan yang ekivalen dengan rumus turunan fungsi. Ide ini lebih dikenal dengan nama Metode Secant. Ide dari metode ini yaitu menggunakan gradien garis yang melalui titik (x0,f(x0))(x0,f(x0)) dan (x1,f(x1))(x1,f(x1)). Perhatikan gambar dibawah ini.</p>
+<h4 id="algortima-pada-dengan-motode-secant"><em>Algortima Pada dengan Motode Secant</em></h4>
+<ol>
+<li>Definisikan fungsi f(x)f(x) yang akan dicari akarnya</li>
+<li>Masukkan interval [a,b][a,b] dimana akar berada, atau bisa dengan menententukan nilai a dan b</li>
+<li>Tentukan toleransi ϵϵ dan iterasi maksimum N</li>
+<li>Hitung f(a)f(a) dan f(b)f(b)</li>
+<li>Menghitung x=a−[(b−a)/f(b)−f(a)]f(a)x=a−[(b−a)/f(b)−f(a)]f(a)</li>
+<li>Jika |a−b|&lt;ϵ,ϵ|a−b|&lt;ϵ,ϵ di mana ϵϵ adalah akurasi yang ditentukan, lalu lanjutkan ke Langkah 8, bila tidak lanjut ke langkah 7</li>
+<li>Set a=ba=b , b=xb=x dan pergi ke langkah ke 4</li>
+<li>Cetak nilai xx yang merupakan nilai akar yang dicari.</li>
+</ol>
+<h4 id="listing-program_3"><u>Listing Program</u></h4>
+<pre><code class="python">def secant(f,a,b,N):
+
+    if f(a)*f(b) &gt;= 0:
+        print(&quot;Secant method fails.&quot;)
+        return None
+    a_n = a
+    b_n = b
+    for n in range(1,N+1):
+        m_n = a_n - f(a_n)*(b_n - a_n)/(f(b_n) - f(a_n))
+        f_m_n = f(m_n)
+        if f(a_n)*f_m_n &lt; 0:
+            a_n = a_n
+            b_n = m_n
+        elif f(b_n)*f_m_n &lt; 0:
+            a_n = m_n
+            b_n = b_n
+        elif f_m_n == 0:
+            print(&quot;Found exact solution.&quot;)
+            return m_n
+        else:
+            print(&quot;Secant method fails.&quot;)
+            return None
+    return a_n - f(a_n)*(b_n - a_n)/(f(b_n) - f(a_n))
+
+p = lambda x: x**2 - 5*x + 6
+approx = secant(p,1,2.4,20)
+print(approx)
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">2.0000003178913373
+</code></pre>
+
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../assignments/" class="btn btn-neutral" title="Error in Numerical Computations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../assignments/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
