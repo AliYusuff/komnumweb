@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Euler Method - Muhammad Ali Yusuf 180411100135</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Euler Method";
+    var mkdocs_page_input_path = "assignments6.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Muhammad Ali Yusuf 180411100135</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../assignments/">Error in Numerical Computations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../assignments2/">Numerical Solution of Algebraic and Transcendental Equations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../assignments3/">Interpolation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../assignments4/">Romberg Method</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../assignments5/">Richardson Extrapolation</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Euler Method</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#algoritma-metode-euler">Algoritma Metode Euler</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contoh-soal">Contoh Soal</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#listing-program">Listing Program</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Muhammad Ali Yusuf 180411100135</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Euler Method</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="euler-method"><strong>Euler Method</strong></h1>
+<p>Dalam matematika dan ilmu komputasi, metode euler juga disebut metode forward euler adalah prosedur numerik orde pertama untuk menyelesaikan persamaan differensial biasa dengan nilai awal yang diberikan.</p>
+<p>Metode Euler adalah salah satu metode satu langkah paling sederhana. Dibandingkan dengan beberapa metode lain, metode ini paling tidak teliti. Namun, metode ini perlu dipelajari mengingat kesederhanaan dan pemahaman yang mudah sehingga membuatnya lebih mudah untuk mempelajari metode lain secara lebih menyeluruh.</p>
+<p>Metode Euler merupakan metode paling sederhana yang diturunkan dari deret Taylor. Penyelesaian initial value problems menggunakan metode Euler dilakukan melalui persamaan</p>
+<p><em>yi + 1 = yi + f(xi,yi) h</em></p>
+<p>dimana i merupakan tahap iterasi.</p>
+<h4 id="algoritma-metode-euler"><strong>Algoritma Metode Euler</strong></h4>
+<blockquote>
+<ol>
+<li>Tentukan titik awal integrasi x0 dan y0</li>
+<li>Tentukan jumlah iterasi n dan step size h yang digunakan.</li>
+<li>Lakukan integrasi menggunakan persamaan diatas.</li>
+</ol>
+</blockquote>
+<h4 id="contoh-soal"><strong>Contoh Soal</strong></h4>
+<blockquote>
+<p>Membuat program untuk menyelesaikan persamaan differensial berikut menggunakan Metode Euler</p>
+<p>dy/dx = 1 + x^2, y(1) = -4</p>
+<p>Untuk menentukan y(1.01), y(1.02) dan y(1.03)</p>
+</blockquote>
+<h4 id="listing-program"><u>Listing Program</u></h4>
+<pre><code class="python">def metodeEuler(x,n):
+    y0=-4
+    h=0.01
+    for i in range(0,n):
+        euler=y0
+        print('x'+str(i)+' = '+str(x))
+        print('y'+str(i)+' = '+str(euler))
+        print('___________________________________')
+        euler=y0+(h*(1+x**2))
+        x+=h
+        y0=euler
+
+
+
+a=int(input(&quot;Inputan x yaitu : &quot;))
+b=int(input(&quot;Iterasi sebanyak : &quot;))
+metodeEuler(a,b)
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">Inputan x yaitu : 1
+Iterasi sebanyak : 4
+x0 = 1
+y0 = -4
+___________________________________
+x1 = 1.01
+y1 = -3.98
+___________________________________
+x2 = 1.02
+y2 = -3.959799
+___________________________________
+x3 = 1.03
+y3 = -3.9393949999999998
+___________________________________
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../assignments5/" class="btn btn-neutral" title="Richardson Extrapolation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../assignments5/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
